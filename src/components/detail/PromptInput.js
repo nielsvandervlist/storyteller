@@ -54,7 +54,7 @@ export default function PromptInput({completion, setCompletion}) {
             onKeyDown={sendPrompt}
             className={'w-full mb-4 text-white'}
         />
-                <button onClick={(e) => sendPrompt(e)} className={'btn btn--pink'}>Create your story</button>
+                <button onClick={(e) => sendPrompt(e)} className={'btn btn--pink w-full md:w-auto'}>Create your story</button>
             </>
         }
         {

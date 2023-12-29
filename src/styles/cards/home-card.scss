@@ -1,12 +1,21 @@
 .home-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @media only screen and (max-width: 600px) {
+        display: block;
+    }
+
     &__block {
         aspect-ratio: 1/ 1;
         display: flex;
         align-items: center;
         color: #fff;
         border-radius: 30px;
+
+        @media only screen and (max-width: 600px) {
+            margin-bottom: 40px;
+        }
 
         img {
             width: 100%;

@@ -12,7 +12,7 @@ export default function TopStory({icon, backgroundIcon, title}){
     const [completion, setCompletion] = useState(false)
 
     return <Container small>
-        <div className="grid grid-cols-3 gap-10 w-full home-cards">
+        <div className="md:grid grid-cols-3 gap-10 w-full home-cards">
             <div>
                 <div className="home-cards__block home-cards__block--pink overflow-hidden">
                     <motion.div
@@ -43,15 +43,10 @@ export default function TopStory({icon, backgroundIcon, title}){
             >
                 <h1 className={'mb-4 text-white'}>{title}</h1>
                 <p className={'intro mb-8'}>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                    dolor.
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                    Nulla
-                    consequat massa quis enim.
+                    Say goodbye to ordinary bedtime tales – Storymaker, with the help of OpenAI, transforms the ordinary into the extraordinary, making bedtime a magical journey filled with warmth, comfort, and the sweetest dreams.
                 </p>
                 <div>
-                    <p className={'underline mb-8'}>For example:</p>
+                    <p className={'underline mb-8 font-bold'}>For example:</p>
 
                     <i className={'mb-8 inline-block'}>I want to hear a story about a bear who lost his
                         mother

@@ -18,7 +18,7 @@ export default function Story() {
                         className={'fixed bg-cover bg-center inset-0'}
                         style={{backgroundImage: `url('/magic-bg-full.png')`}}/>
             <motion.div initial={{opacity: 0}}
-                        animate={{opacity: 0.50}}
+                        animate={{opacity: 0.80}}
                         className={'fixed inset-0 bg-black opacity-70'}/>
             <div className={'z-20 relative'}>
                 <TopStory icon={faHatWizard} backgroundIcon={'bg-6.svg'} title={'Create a magic story'}/>
