@@ -26,7 +26,7 @@ export default function PromptInput({completion, setCompletion}) {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({text: value}),
+                    body: JSON.stringify({text: 'Write a story with max 5 sentences, subject:' + value}),
                 })
 
                 const data = await response.json()
@@ -57,15 +57,14 @@ export default function PromptInput({completion, setCompletion}) {
                 <button onClick={(e) => sendPrompt(e)} className={'btn btn--pink'}>Create your story</button>
             </>
         }
-        {/*{*/}
-        {/*    completion &&*/}
-        {/*    <Loader/>*/}
-        {/*}*/}
+        {
+            completion && !completion.data &&
+            <Loader/>
+        }
         {
             completion.data && <>
-                {/*<Image src={`data:image/jpeg;base64,${completion.image.data[0].b64_json}`} width={200} height={200} alt={'image'} />*/}
-                <div className={'my-8 italic'}><span
-                    className={'block bold mb-8'}>The story:</span> {completion.data.split('\n').map(item => <>{item}<br/></>)}
+                <div className={'my-8 italic overflow-y-scroll'}><span
+                    className={'block bold mb-8'}>The story:</span> {completion.data.split('\n').map(item => <p className={'text-[24px]'}>{item}<br/></p>)}
                 </div>
                 <VoiceForm textValue={completion.data}/>
             </>

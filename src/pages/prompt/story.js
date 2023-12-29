@@ -5,6 +5,7 @@ import Container from '@/components/layout/container'
 import PromptInput from '@/components/detail/PromptInput'
 import {faGhost} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 
 export default function Story() {
 

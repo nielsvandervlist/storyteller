@@ -18,7 +18,7 @@ export default async function handler(req, res) {
                 top_p: 1,
                 frequency_penalty: 0,
                 presence_penalty: 0,
-                max_tokens: 20,
+                max_tokens: 100,
             });
 
             const images = openai.createImage({

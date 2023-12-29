@@ -29,7 +29,6 @@ function VoiceForm({textValue}){
     return (
         <div className={'flex flex-col items-start gap-8'}>
             <div className={'text-[24px] font-bold'}>Voices:</div>
-            <VoiceSelector selected={selectedVoice} setSelected={setSelectedVoice} />
             <button className={'btn btn--pink'} onClick={(e) => speak(e)} >Speak</button>
         </div>
     )
